@@ -1,0 +1,117 @@
+/* Fonts to Import */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Variables */
+:root {
+  --clr-primary-pale: hsl(225, 100%, 94%);
+  --clr-primary-bright: hsl(245, 75%, 52%);
+  --clr-neutral-pale: hsl(225, 100%, 98%);
+  --clr-neutral-desaturated: hsl(224, 23%, 55%);
+  --clr-neutral-dark: hsl(223, 47%, 23%);
+
+  --ff-primary: 'Red Hat Display', sans-serif;
+}
+
+/* Base Styles */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: url('./images/pattern-background-desktop.svg') var(--clr-primary-pale) repeat-x top center/contain;
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  color: var(--clr-neutral-dark);
+  line-height: 1.6;
+}
+
+h1, h4 {
+  font-weight: 900;
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--clr-primary-bright);
+  font-weight: 700;
+}
+
+/* Utilities */
+.container {
+  width: min(90%, 30rem);
+  margin: auto;
+}
+
+.card {
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lead {
+  color: var(--clr-neutral-desaturated)
+}
+
+button, .btn {
+  display: inline-block;
+  background: transparent;
+  padding: 0.8em 2em;
+  border: 0;
+  border-radius: 8px;
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-neutral-desaturated);
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--clr-primary-bright);
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.1);;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.btn-fluid {
+  width: 100%;
+}
+
+/* Card Sections */
+.card-header {
+  background: url('./images/illustration-hero.svg') no-repeat top center/cover;
+  height: 300px;
+}
+
+.card-content {
+  padding: 2rem 2.5rem;
+  text-align: center;
+}
+
+.card-content h1 {
+  margin-bottom: 0.5rem;
+}
+
+.card-content .annual-plan {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--clr-neutral-pale);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.card-content .annual-plan--link {
+  margin-left: auto;
+}
